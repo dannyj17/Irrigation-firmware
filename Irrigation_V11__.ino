@@ -587,7 +587,7 @@ void loop() {
 
   // Poll Supabase for dashboard manual triggers every 5 s (Bug 2)
   static unsigned long lastTriggerPoll = 0;
-  if (now - lastTriggerPoll > 5000UL) {
+  if (now - lastTriggerPoll > 60000UL) {
     lastTriggerPoll = now;
     pollManualTrigger();
   }
